@@ -176,9 +176,10 @@ a:hover .caret-white {
   border: none;
 }
 .list-group.no-border .list-group-item {
-  border-width: 0 1px 1px 0;
+  border-width:1px 1px 0 0;
   padding-left: 20px
 }
+#task{border-bottom:1px solid #eaeef1}
 .list-group.no-bg .list-group-item {
   background-color: transparent;
 }

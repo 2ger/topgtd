@@ -51,7 +51,7 @@
           <span class="input-group-btn">
             <button type="submit" class="btn btn-sm bg-white btn-icon rounded"><i class="fa fa-search"></i></button>
           </span>
-          <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums...">
+          <input type="text" class="form-control input-sm no-border rounded" placeholder="关键词">
         </div>
       </div>
     </form>
@@ -140,6 +140,12 @@
                   </li>
 
                   <li>
+                  <a href="events.html">
+                    <i class="icon-user icon  text-success-dker"></i>
+                    <span class="font-bold">个人中心</span>
+                  </a>
+                  </li>
+                  <li>
                   <a href="task.html" onclick="islogin()">
                     <i class="icon-list icon  text-info-dker"></i>
                     <b class="badge bg-info pull-right">6</b>
@@ -147,9 +153,9 @@
                   </a>
                   </li>
                   <li>
-                  <a href="timeline.html">
-                    <i class="icon-calendar icon  text-info-dker"></i>
-                    <span class="font-bold">时间轴</span>
+                  <a href="events.html">
+                    <i class="icon-user icon  text-success-dker"></i>
+                    <span class="font-bold">备忘录</span>
                   </a>
                   </li>
                  <li>
@@ -159,75 +165,18 @@
                   </a>
                   </li>
                   <li>
+                  <a href="timeline.html">
+                    <i class="icon-calendar icon  text-info-dker"></i>
+                    <span class="font-bold">时间轴</span>
+                  </a>
+                  </li>
+                  <li>
                   <a href="events.html">
                     <i class="icon-drawer icon text-primary-lter"></i>
                     <span class="font-bold">统计</span>
                   </a>
                   </li>
-                  <li>
-                  <a href="events.html">
-                    <i class="icon-user icon  text-success-dker"></i>
-                    <span class="font-bold">个人中心</span>
-                  </a>
-                  </li>
                   <li class="m-b hidden-"></li>
-                </ul>
-                <ul class="nav" data-ride="collapse">
-                  <li class="hidden- padder m-t m-b-sm text-xs text-muted">
-                  任务列表
-                  </li>
-                  <li >
-                  <a href="#" class="auto">
-                    <span class="pull-right text-muted">
-                      <i class="fa fa-angle-left text"></i>
-                      <i class="fa fa-angle-down text-active"></i>
-                    </span>
-                    <i class="icon-screen-desktop icon">
-                    </i>
-                    <span>任务列表</span>
-                  </a>
-                  <ul class="nav dk text-sm">
-                    <li >
-                    <a href="layout-color.html" class="auto">
-                      <i class="fa fa-angle-right text-xs"></i>
-                      <span>任务列表一</span>
-                    </a>
-                    </li>
-                    <li >
-                    <a href="layout-boxed.html" class="auto">                                                        
-                      <i class="fa fa-angle-right text-xs"></i>
-                      <span>插件列表</span>
-                    </a>
-                    </li>
-                    <li >
-                    <a href="layout-fluid.html" class="auto">                                                        
-                      <i class="fa fa-angle-right text-xs"></i>
-
-                      <span>Fluid layout</span>
-                    </a>
-                    </li>
-                  </ul>
-                  </li>
-
-                </ul>
-                <ul class="nav text-sm">
-                  <li class="hidden- padder m-t m-b-sm text-xs text-muted">
-                  <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
-                  插件列表
-                  </li>
-                  <li>
-                  <a href="#">
-                    <i class="icon-music-tone icon"></i>
-                    <span>Hip-Pop</span>
-                  </a>
-                  </li>
-                  <li>
-                  <a href="#">
-                    <i class="icon-playlist icon text-success-lter"></i>
-                    <b class="badge bg-info dker pull-right">9</b>
-                    <span>Jazz</span>
-                  </a>
-                  </li>
                 </ul>
               </nav>
               <!-- / nav -->
@@ -249,7 +198,7 @@
                         <div class="inline">
                           <div class="easypiechart" data-percent="75" data-line-width="5" data-bar-color="#1ab667" data-track-Color="#f5f5f5" data-scale-Color="false" data-size="134" data-line-cap='butt' data-animate="1000">
                             <div class="thumb-lg">
-                              <img src="images/icon.png" class="img-circle" alt="...">
+                              <img src="images/a0.png" class="img-circle" alt="...">
                             </div>
                           </div>
                           <div class="h4 m-t m-b-xs">John.Smith</div>
@@ -309,67 +258,39 @@
                 <section class="vbox">
                   <header class="header bg-light lt">
                     <ul class="nav nav-tabs nav-white">
-                      <li class="active"><a href="#task" data-toggle="tab">自定义  <i class="fa fa-sort-numeric-asc"></i> </a></li>
-                      <li class=""><a href="#pomo" data-toggle="tab">时间 <i class="icon-clock"></i></a></li>
-                      <li class=""><a href="#pomo" data-toggle="tab">重要性 <i class="icon-flag"></i></a></li>
+                      <li class="active"><a href="#tab1" data-toggle="tab">紧急 <i class="fa fa-sort-numeric-asc"></i> </a></li>
+                      <li class=""><a href="#tab2" data-toggle="tab">不紧急 <i class="icon-clock"></i></a></li>
+                      <li class=""><a href="#tab3" data-toggle="tab">重要 <i class="icon-flag"></i></a></li>
+                      <li class=""><a href="#tab4" data-toggle="tab">不重要 <i class="icon-flag"></i></a></li>
 
                       <li class="pull-right"><a href="#interaction" data-toggle="tab">已完成 <i class="icon-check"></i></a></li>
                     </ul>
                   </header>
                   <section class="scrollable">
                     <div class="tab-content">
-                      <div class="tab-pane active" id="task">
-
-                        <!-- tasklist -->
+                      <div class="tab-pane active" id="tab1">
                         <div class="dd" id="nestable3">
-                          <!--   <ol class="dd-list">
-                      <li class="dd-item dd3-item" data-id="13">
-                          <div class="dd-handle dd3-handle">Drag</div><div class="dd3-content">Item 13</div>
-                      </li>
-                      <li class="dd-item dd3-item" data-id="14">
-                          <div class="dd-handle dd3-handle">Drag</div><div class="dd3-content">Item 15</div>
-                          <ol class="dd-list">
-                              <li class="dd-item dd3-item" data-id="15">
-                                  <div class="dd-handle dd3-handle">Drag</div><div class="dd3-content">Item 18</div>
-                              </li>
-                          </ol>
-                      </li>
-                    </ol> -->
                           <ol class="dd-list list-group list-group-lg no-radius no-border m-t-n-xxs m-b-none auto" id="task">
                          <!--load task list here -->
-                            </ol>
+                         </ol>
                         </div>
-
-                      </div>
-                      <div class="tab-pane" id="pomo">
-                        <div class=""><!-- text-center wrapper -->
-                          <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
-                            <li class="list-group-item">
-                            <a href="#" class="thumb-sm pull-left m-r-sm">
-                              <img src="images/a0.png" class="img-circle">
-                            </a>
-                            <a href="#" class="clear">
-                              <small class="pull-right">3 minuts ago</small>
-                              <strong class="block">Drew Wllon</strong>
-                              <small>Wellcome and play this web application template ... </small>
-                            </a>
-                            </li>
-                            <li class="list-group-item">
-                            <a href="#" class="thumb-sm pull-left m-r-sm">
-                              <img src="images/a1.png" class="img-circle">
-                            </a>
-                            <a href="#" class="clear">
-                              <small class="pull-right">1 hour ago</small>
-                              <strong class="block">Jonathan George</strong>
-                              <small>Morbi nec nunc condimentum...</small>
-                            </a>
-                            </li>
-                          </ul>
+                      </div><div class="tab-pane active" id="tab2">
+                        <div class="dd" id="nestable3">
+                          <ol class="dd-list list-group list-group-lg no-radius no-border m-t-n-xxs m-b-none auto" id="task2">
+                         <!--load task list here -->
+                         </ol>
                         </div>
-                      </div>
-                      <div class="tab-pane" id="interaction">
-                        <div class="text-center wrapper">
-                          <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
+                      </div><div class="tab-pane active" id="tab3">
+                        <div class="dd" id="nestable3">
+                          <ol class="dd-list list-group list-group-lg no-radius no-border m-t-n-xxs m-b-none auto" id="task3">
+                         <!--load task list here -->
+                         </ol>
+                        </div>
+                      </div><div class="tab-pane active" id="tab4">
+                        <div class="dd" id="nestable3">
+                          <ol class="dd-list list-group list-group-lg no-radius no-border m-t-n-xxs m-b-none auto" id="task4">
+                         <!--load task list here -->
+                         </ol>
                         </div>
                       </div>
                     </div>
@@ -454,7 +375,6 @@
                     </article>
                   </section>  </section>
                 </section> 
-                             
               </aside>
             </section>
           </section>
